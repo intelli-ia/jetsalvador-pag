@@ -1,21 +1,19 @@
-import About from "@/components/About";
 import HeroSection from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
 import Services from "@/components/Services";
 import Gallery from "@/components/Gallery";
-import Testimonials from "@/components/Testimonials";
-import { FinalCTASection } from "@/components/FinalCTA";
+import About from "@/components/About";
 import FAQSection from "@/components/FAQ";
+import { FinalCTASection } from "@/components/FinalCTA";
 
 export default function HomePage() {
   return (
     <main>
       <HeroSection />
-      {/* <SocialProof /> */}
-      <About /> 
+      <SocialProof />
       <Services />
       <Gallery />
-      <Testimonials />
+      <About />
       <FAQSection />
       <FinalCTASection />
     </main>
