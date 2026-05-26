@@ -62,6 +62,7 @@ export default function HeroSection() {
           >
             Com mais de 15 anos de experiência no mercado, oferecemos uma
             formação completa para você assumir o leme com total segurança,
+            <br className="hidden md:block" />
             zero dor de cabeça e sem pesar no bolso.
           </motion.p>
 
