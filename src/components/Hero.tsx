@@ -1,14 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative w-full min-h-screen flex items-center">
+    <section id="hero" className="relative w-full min-h-screen flex items-start md:items-center">
 
       {/* Background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -18,14 +17,14 @@ export default function HeroSection() {
           fill
           priority
           className="object-cover"
-          style={{ objectPosition: "50% 30%" }}
+          style={{ objectPosition: "80% 65%" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/20" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 md:px-16 pt-28 pb-20 md:pl-24 lg:pl-32">
+      <div className="container mx-auto px-6 md:px-16 pt-16 pb-16 md:pt-28 md:pb-20 md:pl-24 lg:pl-32">
         <div className="max-w-3xl">
 
           {/* Badge */}
@@ -33,9 +32,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="inline-flex items-center gap-2.5 mb-8"
+            className="inline-flex items-center gap-2.5 mb-3 md:mb-8"
           >
-            <span className="text-[#00B8D9] text-xs font-semibold uppercase tracking-[0.2em]">
+            <span className="text-[#00B8D9] text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em]">
               Credenciado pela Marinha do Brasil
             </span>
           </motion.div>
@@ -45,13 +44,12 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="font-title font-bold leading-[1.04] text-white mb-7"
-            style={{ fontSize: "clamp(1.9rem, 4vw, 3.25rem)" }}
+            className="font-title font-bold leading-[1.04] text-white mb-3 md:mb-7 text-[1.55rem] md:text-[2.5rem] lg:text-[3.25rem]"
           >
             Adquira sua habilitação
             <br />
             náutica de forma mais fácil
-            <br />
+            <br className="hidden md:block" />
             do que você imagina.
           </motion.h1>
 
@@ -60,11 +58,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-            className="text-white/65 text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-10"
+            className="text-white/65 text-sm md:text-xl font-light leading-relaxed max-w-2xl mb-5 md:mb-10"
           >
             Com mais de 15 anos de experiência no mercado, oferecemos uma
             formação completa para você assumir o leme com total segurança,
-            <br />
             zero dor de cabeça e sem pesar no bolso.
           </motion.p>
 
@@ -73,7 +70,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.55 }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-12"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-5 md:mb-12"
           >
             <CTAButton
               href="https://wa.me/5571991011008"
@@ -81,10 +78,9 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               label="Quero Tirar Minha Habilitação"
             />
-
           </motion.div>
 
-          {/* Stats inline */}
+          {/* Stats */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -96,14 +92,14 @@ export default function HeroSection() {
               { num: 95,  prefix: "",  suffix: "%", label: "taxa de aprovação" },
               { num: 15,  prefix: "",  suffix: "+", label: "anos de experiência" },
             ].map((stat, i) => (
-              <div key={i} className="flex flex-col px-5 first:pl-0">
+              <div key={i} className="flex flex-col px-3 md:px-5 first:pl-0">
                 <AnimatedNumber
                   value={stat.num}
                   prefix={stat.prefix}
                   suffix={stat.suffix}
-                  className="font-title text-white font-bold text-lg leading-none"
+                  className="font-title text-white font-bold text-base md:text-lg leading-none"
                 />
-                <span className="text-white/40 text-xs mt-1 whitespace-nowrap">
+                <span className="text-white/40 text-[10px] md:text-xs mt-1 whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>

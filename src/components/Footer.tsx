@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="w-full bg-[#0F0F0F] border-t border-white/5">
       <div className="container mx-auto px-6 md:px-16">
 
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
 
           {/* Brand */}
           <motion.div
@@ -16,12 +16,12 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 space-y-5"
+            className="lg:col-span-2 space-y-4 md:space-y-5"
           >
             <h3 className="font-title text-2xl font-bold text-white">
               Jet <span className="text-[#00B8D9]">Salvador</span>
             </h3>
-            <p className="text-white/40 text-[15px] leading-relaxed max-w-md">
+            <p className="text-white/40 text-[14px] md:text-[15px] leading-relaxed max-w-md">
               Habilitação náutica para Jet Ski e Lancha em Salvador. Mais de 15 anos de experiência, credenciados pela Marinha do Brasil e com 95% de aprovação nos exames oficiais.
             </p>
             <div className="flex gap-3">
@@ -52,13 +52,13 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
             viewport={{ once: true }}
-            className="space-y-5"
+            className="space-y-4 md:space-y-5"
           >
             <h4 className="font-semibold text-white text-sm uppercase tracking-widest">Habilitações</h4>
-            <nav className="space-y-3">
+            <nav className="space-y-2.5 md:space-y-3">
               {["Habilitação Motonauta", "Habilitação Arrais Amador", "Despachante Náutico", "Aulas Práticas na Baía"].map((item) => (
                 <Link key={item} href="https://wa.me/5571991011008" target="_blank" rel="noopener noreferrer"
-                  className="block text-white/40 hover:text-[#00B8D9] text-[15px] transition-colors duration-300">
+                  className="block text-white/40 hover:text-[#00B8D9] text-[14px] md:text-[15px] transition-colors duration-300">
                   {item}
                 </Link>
               ))}
@@ -71,30 +71,30 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
             viewport={{ once: true }}
-            className="space-y-5"
+            className="space-y-4 md:space-y-5"
           >
             <h4 className="font-semibold text-white text-sm uppercase tracking-widest">Contato</h4>
-            <div className="space-y-3">
+            <div className="space-y-2.5 md:space-y-3">
               {[
                 { href: "https://wa.me/5571991011008", label: "WhatsApp" },
                 { href: "https://instagram.com/jetsalvadoroficial", label: "Instagram" },
                 { href: "tel:+5571991011008", label: "(71) 99101-1008" },
               ].map(({ href, label }) => (
                 <Link key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="block text-white/40 hover:text-[#00B8D9] text-[15px] transition-colors duration-300">
+                  className="block text-white/40 hover:text-[#00B8D9] text-[14px] md:text-[15px] transition-colors duration-300">
                   {label}
                 </Link>
               ))}
-              <p className="text-white/40 text-[15px]">Salvador, Bahia</p>
+              <p className="text-white/40 text-[14px] md:text-[15px]">Salvador, Bahia</p>
             </div>
           </motion.div>
 
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/5 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/25 text-sm">© 2025 Jet Salvador. Todos os direitos reservados.</p>
-          <p className="text-white/25 text-sm flex items-center gap-2">
+        <div className="border-t border-white/5 py-6 md:py-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+          <p className="text-white/25 text-xs md:text-sm">© 2025 Jet Salvador. Todos os direitos reservados.</p>
+          <p className="text-white/25 text-xs md:text-sm flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-[#00B8D9] rounded-full" />
             Credenciado pela Marinha do Brasil
           </p>

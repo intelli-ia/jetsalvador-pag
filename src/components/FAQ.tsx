@@ -31,7 +31,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="relative w-full py-24 md:py-36 bg-gray-50">
+    <section id="faq" className="relative w-full py-16 md:py-36 bg-gray-50">
       <div className="container mx-auto px-6 md:px-16">
 
         <motion.div
@@ -39,12 +39,12 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-10 md:mb-16"
         >
           <span className="inline-block text-[#00B8D9] font-semibold text-sm uppercase tracking-widest mb-4">
             Dúvidas
           </span>
-          <h2 className="font-title text-4xl md:text-5xl lg:text-6xl font-bold text-[#1C1C1C] leading-tight">
+          <h2 className="font-title text-3xl md:text-5xl lg:text-6xl font-bold text-[#1C1C1C] leading-tight">
             Perguntas{" "}
             <span className="bg-gradient-to-r from-[#00B8D9] to-[#00A6BF] bg-clip-text text-transparent">
               Frequentes
@@ -52,7 +52,7 @@ export default function FAQSection() {
           </h2>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto space-y-3 mb-16">
+        <div className="max-w-3xl mx-auto space-y-3 mb-10 md:mb-16">
           {faqs.map((faq, i) => (
             <motion.div
               key={i}
@@ -64,15 +64,15 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 px-7 py-6 text-left group hover:bg-gray-50/70 transition-colors duration-200"
+                className="w-full flex items-center justify-between gap-3 px-5 md:px-7 py-5 md:py-6 text-left group hover:bg-gray-50/70 transition-colors duration-200"
               >
-                <span className="font-title font-semibold text-[17px] text-[#1C1C1C] group-hover:text-[#00B8D9] transition-colors duration-200 leading-snug">
+                <span className="font-title font-semibold text-[15px] md:text-[17px] text-[#1C1C1C] group-hover:text-[#00B8D9] transition-colors duration-200 leading-snug">
                   {faq.q}
                 </span>
-                <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                <span className={`flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                   open === i ? "bg-gradient-to-br from-[#00B8D9] to-[#00A6BF] rotate-45" : "bg-gray-100 group-hover:bg-[#00B8D9]/10"
                 }`}>
-                  <svg className={`w-4 h-4 transition-colors duration-300 ${open === i ? "text-white" : "text-[#4B4B4B]"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-3.5 h-3.5 md:w-4 md:h-4 transition-colors duration-300 ${open === i ? "text-white" : "text-[#4B4B4B]"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
                 </span>
@@ -87,9 +87,9 @@ export default function FAQSection() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-7 pb-7">
-                      <div className="w-full h-px bg-gray-100 mb-5" />
-                      <p className="text-[#4B4B4B] leading-relaxed text-[16px]">{faq.a}</p>
+                    <div className="px-5 md:px-7 pb-5 md:pb-7">
+                      <div className="w-full h-px bg-gray-100 mb-4 md:mb-5" />
+                      <p className="text-[#4B4B4B] leading-relaxed text-[14px] md:text-[16px]">{faq.a}</p>
                     </div>
                   </motion.div>
                 )}
@@ -105,7 +105,7 @@ export default function FAQSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-[#4B4B4B] text-lg mb-6">
+          <p className="text-[#4B4B4B] text-base md:text-lg mb-5 md:mb-6">
             Ainda tem dúvidas? Fale com a gente agora pelo WhatsApp.
           </p>
           <CTAButton

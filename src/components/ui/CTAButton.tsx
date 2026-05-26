@@ -22,7 +22,7 @@ export function CTAButton({
 }: CTAButtonProps) {
   const sizeClasses = size === "sm"
     ? "px-5 py-2.5 text-sm gap-2"
-    : "px-8 py-4 gap-2.5";
+    : "px-6 py-3 text-sm gap-2 md:px-8 md:py-4 md:text-base md:gap-2.5";
 
   return (
     <Link

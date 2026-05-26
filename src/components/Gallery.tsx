@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/ui/CTAButton";
 
 export default function DesireSection() {
   return (
-    <section className="relative w-full py-24 md:py-36 bg-[#1C1C1C]">
+    <section className="relative w-full py-16 md:py-36 bg-[#1C1C1C]">
       <div className="container mx-auto px-6 md:px-16">
         <div className="max-w-3xl mx-auto text-center">
 
@@ -24,7 +24,7 @@ export default function DesireSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="font-title text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+            className="font-title text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 md:mb-6"
           >
             Como você quer passar o seu próximo final de semana?
           </motion.h2>
@@ -34,7 +34,7 @@ export default function DesireSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-white/60 text-xl font-light leading-relaxed mb-10"
+            className="text-white/60 text-lg md:text-xl font-light leading-relaxed mb-8 md:mb-10"
           >
             Ninguém gosta de depender dos outros para se divertir, não é mesmo?
             Tire sua habilitação hoje, pegue o comando e faça você o seu próprio roteiro.

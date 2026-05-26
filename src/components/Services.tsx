@@ -29,7 +29,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section id="processo" className="relative w-full min-h-[120vh] flex items-start overflow-hidden">
+    <section id="processo" className="relative w-full min-h-screen md:min-h-[120vh] flex items-start overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -38,10 +38,12 @@ export default function ProcessSection() {
           fill
           className="object-cover object-center"
         />
+        {/* Overlay only on mobile for legibility */}
+        <div className="absolute inset-0 bg-black/50 md:bg-transparent" />
       </div>
 
-      <div className="container mx-auto px-6 md:px-16 pt-36 pb-16 flex justify-end">
-        <div className="max-w-4xl">
+      <div className="container mx-auto px-6 md:px-16 pt-24 pb-16 md:pt-36 md:pb-16 flex justify-center md:justify-end">
+        <div className="w-full md:max-w-4xl">
 
           {/* Header */}
           <motion.div
@@ -54,13 +56,15 @@ export default function ProcessSection() {
             <span className="inline-block text-white/60 font-semibold text-sm uppercase tracking-widest mb-2">
               Passo a passo
             </span>
-            <h2 className="font-title text-4xl md:text-5xl font-bold text-white leading-tight">
-              Veja como é simples conquistar<br />o seu passaporte para o mar
+            <h2 className="font-title text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Veja como é simples conquistar
+              <br className="hidden md:block" />
+              {" "}o seu passaporte para o mar
             </h2>
           </motion.div>
 
           {/* Steps */}
-          <div className="grid grid-cols-2 gap-4 mb-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-4 mb-3">
             {steps.map((step, i) => (
               <motion.div
                 key={i}
@@ -74,10 +78,10 @@ export default function ProcessSection() {
                   {step.number}
                 </span>
                 <div>
-                  <h3 className="font-title font-bold text-white text-[17px] leading-snug mb-0.5">
+                  <h3 className="font-title font-bold text-white text-[16px] md:text-[17px] leading-snug mb-0.5">
                     {step.title}
                   </h3>
-                  <p className="text-white/60 text-[15px] leading-relaxed">
+                  <p className="text-white/60 text-[14px] md:text-[15px] leading-relaxed">
                     {step.body}
                   </p>
                 </div>
